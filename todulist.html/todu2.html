@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Abc=function(){
+                function add(){
+                    var a=document.getElementById("d2").value
+                    setstudents([a,...students])
+                
+                }
+            
+
+
+            var[students,setstudents]=React.useState([
+                "ramu",
+                "raju",
+                "siva",
+                "krishna",
+                "jaggu"
+            ])
+            return <div>
+                <input type="text" name="" id="d2"/>
+                <button onClick={()=>{add()}}>add</button>
+                {students.map((s)=>{
+                    return <li>{s}</li>
+                })}
+
+                
+                </div>
+            }
+                ReactDOM.render(<Abc/>,document.getElementById("d1"))
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Abc= function(){
+                var[a,seta]=React.useState([12,34,23,45,32,643,218,343])
+                return <div>
+                    {
+                        a.map((s)=>{
+                            return (s%2===0? <li>{s}</li>:null)
+                        })
+                    }
+                    </div>
+            }
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+
+        </script>
+    </body>
+</html>

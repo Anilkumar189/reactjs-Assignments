@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            // Print the images as table cells from array of image urls in react compound
+            var Abc=function(){
+                var [w,setw]=React.useState([
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4XeGhGXI9XJNBp5y4SmPE2TcNaUlfFDXqxshvchx3eQ&s",
+                    "https://cdn.britannica.com/83/195983-138-66807699/numbers-tiger-populations.jpg?w=800&h=450&c=crop",
+                    "https://i.natgeofe.com/k/07176791-9577-4e31-b101-b10ca7ca9a3c/Stripes_Tiger-Terrific_KIDS_0722_16x9.jpg"
+                ])
+                return <div>{
+                    w.map((q)=>{
+                        return <td><img src={q} width="200px"/></td>
+                    })
+                }
+                    </div>
+            }
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+
+
+        </script>
+    </body>
+</html>

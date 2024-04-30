@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            // Print the sum of all numbers of array in React component
+            var Abc=function(){
+                var [s,sets]=React.useState([123,12,344,5,643,22,45])
+                return <div>
+                    {
+                        s.reduce((a,b)=>{
+                            return a+b
+                        },0)
+                    }</div>
+            }
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+
+        </script>
+    </body>
+</html>

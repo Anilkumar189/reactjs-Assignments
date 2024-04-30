@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+     <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Abc=function(){
+                var [q,setq]=React.useState({
+
+                    firstname:"ravi",
+                    lastname:"gubbala",
+                    age:20,
+                    gender:"male"
+                })
+                return <div>{
+                
+                <div style={{border:"1px solid",margin:"10px",padding:"10px",color:"green",}}>
+                    <h1>firstname:{q.firstname}</h1>
+                    <h1>lastname:{q.lastname}</h1>
+                    <h1>age:{q.age}</h1>
+                    <i>gender:{q.gender}</i>
+
+                    </div>
+                }
+                </div>
+            }
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+        
+        </script>
+
+    </body>
+</html>

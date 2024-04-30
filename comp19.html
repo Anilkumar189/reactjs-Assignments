@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <body type="text/babel">
+           <div id="d1"></div>
+            <script type="text/babel">
+                var Abc= function(){
+                    var b=+prompt("")
+                    var[a,seta]=React.useState(b)
+                    return <h1>{a%2===0?(<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS"/>):(<img src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"width="50%"/>)}</h1>
+                    
+                }
+                ReactDOM.render(<Abc/>,document.getElementById("d1"))
+
+            </script>
+        </body>
+    </head>
+</html>

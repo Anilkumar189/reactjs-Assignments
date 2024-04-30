@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Abc=function(){
+                function as (e){
+                     console.log(e.clientX,e.clientY)
+                }
+                return <div style={{border:"2px solid",width:"400px",height:"400px"}}>
+                          <button onClick={as}>click here to see the alert</button>
+                    </div>
+            }
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+
+        </script>
+    </body>
+</html>

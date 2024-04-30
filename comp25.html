@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Abc=function(){
+                var[w,setw]=React.useState([12,34,543,234,67,43,45])
+                var[d,setd]=React.useState([32,45,34,56,12,21])
+                 return <div>
+                    {
+                        w.concat(d).sort((a,b)=>{ return a>b? 1:-1}).map((a)=>{
+                            return <li>{a}</li>
+                        })
+                             
+                        }
+                    
+                    </div>
+            
+                }
+        
+        
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+
+        </script>
+    </body>
+</html>

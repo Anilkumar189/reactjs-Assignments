@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <!-- Print even numbers in italics and odd numbers in bold in list in React component -->
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Abc=function(){
+                var[s,sets]=React.useState([12,21,32,23,43,34,54,45,76,67,98,89,9,90])
+
+                return <div>{
+                    s.map((d)=>{
+                    return (d%2===0? <li><i>{d}</i></li>:<li><b>{d}</b></li>)
+                    })
+                }
+                    </div>
+            }
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+
+        </script>
+    </body>
+</html>
